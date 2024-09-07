@@ -3,37 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Price Lists</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Image Upload</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Game Price Lists</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="updates.html">Updates</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h2>Price Lists for Games</h2>
-        <div class="gallery">
-            <!-- Example Image 1 -->
-            <div class="gallery-item">
-                <img src="C:\Users\lesha\OneDrive\Desktop\Github Website\WhatsApp Image 2024-09-06 at 6.24.59 PM (1).jpeg" alt="Game 1 Price List">
-                <h3>Game 1 Price List</h3>
-            </div>
-            <!-- Example Image 2 -->
-            <div class="gallery-item">
-                <img src="images/game2_price_list.jpg" alt="Game 2 Price List">
-                <h3>Game 2 Price List</h3>
-            </div>
-            <!-- Add more images as needed -->
-        </div>
-    </main>
-    <footer>
-        <p>&copy; 2024 Your Company</p>
-    </footer>
+    <h1>Upload an Image</h1>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <label for="image-title">Title:</label>
+        <input type="text" id="image-title" name="title" required><br><br>
+        <label for="image-upload">Select an image:</label>
+        <input type="file" id="image-upload" name="image" accept="image/*" required><br><br>
+        <input type="submit" value="Upload">
+    </form>
+    
+    <h2>Uploaded Images:</h2>
+    <!-- This is where you can display uploaded images with their titles -->
 </body>
 </html>
+
